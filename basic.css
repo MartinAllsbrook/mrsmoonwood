@@ -1,21 +1,51 @@
+:root{
+    --animationDuration: 350ms;
+}
+
 body{
     margin: 0;
     padding: 0;
 }
 
 header {
-    margin: 0;
+    margin: 22px 0 0 0;
     padding: 0;
 
     width: 100%;
-    height: 50px;
+    height: 37px;
 
     display: flex;
 
-    background-color: #A1559A;
+    background-color: rgba(115, 93, 91, 0.6);
+    transition: background-color var(--animationDuration) linear;
     color: white;
 }
+header h1{
+    font-family: 'Test Tiempos Headline';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32.5px;
+    line-height: 37px;
 
+    margin: 0;
+    padding: 0;
+}
+header div{
+    flex-grow: 1;
+    margin: 0 80px;
+    padding: 0;
+
+    display: flex;
+}
+.header-right{
+    justify-content: right;
+}
+
+
+
+/* -=+=====================+=- */
+/* -=+=- Slideshow Style -=+=- */
+/* -=+=====================+=- */
 .slideshow {
     margin: 0;
     padding: 0;
@@ -28,7 +58,6 @@ header {
     position: fixed;
     top: 0%;
 }
-
 .slideshow img{
     position: absolute;
 
@@ -37,22 +66,18 @@ header {
 
     object-fit: cover;
 }
-
 .slideshow img:nth-of-type(1){
     animation-name: fader;
     animation-delay: 6s;
-    animation-duration: 350ms;
+    animation-duration: var(--animationDuration);
     z-index: -1;
 }
-
 .slideshow img:nth-of-type(2){
     z-index: -2;
 }
-
 .slideshow img:nth-of-type(n+3){
     display: none;
 }
-
 @keyframes fader {
     from { opacity: 1.0; }
     to   { opacity: 0.0; }
