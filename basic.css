@@ -1,12 +1,19 @@
 :root{
-    --animationDuration: 350ms;
+    --animation-duration: 350ms;
+    --current-color: rgba(115, 93, 91, 0.6);
 }
 
 body{
     margin: 0;
     padding: 0;
+
+    color: white;
 }
 
+
+/* -=+=====================+=- */
+/* -=+=- Header Style -=+=- */
+/* -=+=====================+=- */
 header {
     margin: 22px 0 0 0;
     padding: 0;
@@ -16,9 +23,9 @@ header {
 
     display: flex;
 
-    background-color: rgba(115, 93, 91, 0.6);
-    transition: background-color var(--animationDuration) linear;
-    color: white;
+    background-color: var(--current-color);
+    transition: background-color var(--animation-duration) linear;
+    /* color: white; */
 }
 header h1{
     font-family: 'Test Tiempos Headline';
@@ -40,8 +47,73 @@ header div{
 .header-right{
     justify-content: right;
 }
+/* -=+=====================+=- */
+/* -=+=- Contact Style -=+=- */
+/* -=+=====================+=- */
+.contact {
+    width: 100%;
+    height: 100%;
 
+    position: fixed;
+    top: 0;
+    left: 0;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .wrap {
+    background-color: var(--current-color);
+
+    width: 808px;
+    height: 500px;
+
+    border-radius: 11px;
+    backdrop-filter: blur(4px);
+
+    margin: 0;
+    padding: 32px;
+}
+.contact .wrap h1{
+    /* position: absolute;
+    width: 107px;
+    height: 24px;
+    left: 348px;
+    top: 191px; */
+
+    /* font-family: 'Test Tiempos Headline'; */
+    /* font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px; */
+}
+.contact form {
+    /* display: block; */
+margin: 32px;}
+.contact input {
+    box-sizing: border-box;
+
+    /* position: absolute; */
+    width: 744px;
+    height: 32px;
+
+    margin: 0 0 24px 0;
+
+    background: var(--current-color);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+}
+.contact .name input {
+    width: 360px;
+}
+
+.contact .message {
+    height: 132px;
+}
+
+.contact button {
+    display: block;
+}
 
 /* -=+=====================+=- */
 /* -=+=- Slideshow Style -=+=- */
@@ -69,7 +141,7 @@ header div{
 .slideshow img:nth-of-type(1){
     animation-name: fader;
     animation-delay: 6s;
-    animation-duration: var(--animationDuration);
+    animation-duration: var(--animation-duration);
     z-index: -1;
 }
 .slideshow img:nth-of-type(2){

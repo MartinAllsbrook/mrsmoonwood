@@ -10,7 +10,6 @@ window.addEventListener('DOMContentLoaded', (e) => {
     ];
 
     var slideshow = document.getElementsByClassName('slideshow')[0];
-    var header = document.getElementsByTagName('header')[0];
     var currentColor = 1; // Initializes at 1 beacause color 0 is set by css
 
     // Create function fadeComplete
@@ -20,7 +19,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
     };
     // Create function fadeStart
     var fadeStart = () => {
-        header.style.background = backgroundColors[currentColor];
+        document.documentElement.style.setProperty('--current-color', backgroundColors[currentColor]);
+        
         if(currentColor == 4){
             currentColor = 0;
         } else {
