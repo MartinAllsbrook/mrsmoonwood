@@ -12,6 +12,13 @@ window.addEventListener('DOMContentLoaded', (e) => {
     var slideshow = document.getElementsByClassName('slideshow')[0];
     var currentColor = 1; // Initializes at 1 beacause color 0 is set by css
 
+    document.querySelector('header button').addEventListener('click', () => {
+        document.getElementsByClassName('contact')[0].style.display = 'flex';
+    });
+    document.querySelector('.contact .noshow').addEventListener('click', () => {
+        document.getElementsByClassName('contact')[0].style.display = 'none';
+    });
+
     // Create function fadeComplete
     var fadeComplete = (e) => {
         // Put first image element inside slideshow element

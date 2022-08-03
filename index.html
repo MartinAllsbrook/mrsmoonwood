@@ -12,25 +12,26 @@
                 <h1>Mrs. Moonwood Design</h1>
             </div>
             <div class="header-right">
-                <h1>Contact</h1>
-                <img src="" alt="">
+                <button class="noshow"><h1>Contact</h1></button>
+                <a href="https://www.instagram.com/lightingiseverything/?hl=en" target="_blank"><img src="images/Instagram Logo.svg" alt=""></a>
             </div>
         </header>
 
         <section class="contact">
             <div class="wrap">
-                <div>
+                <div class="flex">
                     <h1>Get in touch</h1>
+                    <button class="noshow"><img src="images/closeicon.svg" alt=""></button>
                 </div>
                 <!-- <form action="https://formsubmit.co/589cc27f52319e8937d06af88a334668" method="POST"> -->
                 <form action="">
                     <div class="name">
-                        <input type="text" name="first-name" required>
-                        <input type="text" name="last-name" required>
+                        <input type="text" name="first-name"  placeholder="First Name" class="first-name" required>
+                        <input type="text" name="last-name" placeholder="Last Name" required>
                     </div>
-                    <input type="email" name="email" required>
-                    <input type="text" name="subject" required>
-                    <input type="text" name="message" class="message">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Message"></textarea>
                     <button type="submit">Submit</button>
                </form>
             </div>
