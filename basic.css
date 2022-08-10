@@ -7,23 +7,30 @@ body{
     margin: 0;
     padding: 0;
 
-    color: white;
+    color: #EBE5E2;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
 }
 
 /* -=+=====================+=- */
 /* -=+=- Header Style -=+=- */
 /* -=+=====================+=- */
 header {
-    margin: 22px 0 0 0;
+    margin: 0;
     padding: 0;
 
     width: 100%;
-    height: 37px;
+    height: 64px;
 
     display: flex;
 
-    background-color: var(--current-color);
-    transition: background-color var(--animation-duration) linear;
+    background-color: #735B6B;
+    border-bottom: 3px solid #FF7511;
+    color: #EBE5E2;
+    /* transition: background-color var(--animation-duration) linear; */
     /* color: white; */
 }
 header h1{
@@ -40,7 +47,7 @@ header a {
     display: flex;
     margin: 0 0 0 24px;
     padding: 0;
-    color: white;
+    color: #EBE5E2;
     text-decoration: none;
 }
 
@@ -57,10 +64,11 @@ header div{
     padding: 0;
 
     display: flex;
+    align-items: center;
 }
 .header-right{
     justify-content: right;
-    align-items: center;
+
 }
 .noshow {
     border: none;
@@ -207,42 +215,31 @@ header div{
     margin: 0;
 }
 
-/* -=+=====================+=- */
-/* -=+=- Slideshow Style -=+=- */
-/* -=+=====================+=- */
-.slideshow {
-    margin: 0;
-    padding: 0;
+/* -=+==================+=- */
+/* -=+=- Images Style -=+=- */
+/* -=+==================+=- */
 
-    width: 100vw;
-    height: 100vh;
+.hover-images{
+    display: flex;
 
-    z-index: -1;
-
-    position: fixed;
-    top: 0%;
+    height: calc(100vh - 67px);
+    width: 100%;
 }
-.slideshow img{
-    position: absolute;
+.hover-images div {
+    flex-shrink: 1;
+    width: 100%;
+    height: 100%;
+    max-width: fit-content;
+}
 
-    width: 100vw;
-    height: 100vw;
-
+.hover-images img {
+    flex-shrink: 1;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
+    display: inline-block;
 }
-.slideshow img:nth-of-type(1){
-    animation-name: fader;
-    animation-delay: 6s;
-    animation-duration: var(--animation-duration);
-    z-index: -1;
-}
-.slideshow img:nth-of-type(2){
-    z-index: -2;
-}
-.slideshow img:nth-of-type(n+3){
-    display: none;
-}
-@keyframes fader {
-    from { opacity: 1.0; }
-    to   { opacity: 0.0; }
+
+#test{
+    flex-shrink: 0;
 }
