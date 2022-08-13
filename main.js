@@ -22,6 +22,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             // Change div properties
             // images[index].style.transition = 'flex-shrink 1500ms ease-out';
             images[index].style.flexShrink = '0';
+            images[index].style.filter = 'drop-shadow(0 0 6px #000000)';
+            images[index].style.zIndex = '10';
             // images[index].style.flexGrow = '1';
             // images[index].style.flexBasis = '100';
             // images[index].style.borderColor = 'green';
@@ -36,6 +38,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             // Change div properties
             // images[index].style.transition = 'flex-shrink 500ms ease-out';
             images[index].style.flexShrink = '1';
+            images[index].style.filter = 'none';
+            images[index].style.zIndex = '0';
             // images[index].style.flexGrow = '0';
             // images[index].style.flexBasis = '1';
             // images[index].style.borderColor = 'red';

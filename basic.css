@@ -26,10 +26,13 @@ header {
     height: 64px;
 
     display: flex;
+    position: relative;
 
     background-color: #735B6B;
     border-bottom: 3px solid #FF7511;
     color: #EBE5E2;
+
+    z-index: 20;
     /* transition: background-color var(--animation-duration) linear; */
     /* color: white; */
 }
@@ -243,7 +246,6 @@ header div{
     width: 100%;
     object-fit: cover;
     display: inline-block;
-
     filter: saturate(0.25) brightness(0.6);
 }
 
