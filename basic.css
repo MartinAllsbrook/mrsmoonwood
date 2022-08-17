@@ -1,6 +1,6 @@
 :root{
     --animation-duration: 350ms;
-    --current-color: rgba(115, 93, 91, 0.6);
+    --current-color: rgba(115, 91, 107, 0.6);
 }
 
 body{
@@ -53,10 +53,17 @@ header a {
     color: #EBE5E2;
     text-decoration: none;
 }
-
+.contact-icon{
+    width: 34px;
+    height: 20px;
+}
+.instagram-icon{
+    width: 26px;
+    height: 26px;
+}
 header img{
-    width: 25px;
-    height: 25px;
+    /* width: 25px; */
+    /* height: 25px; */
 
     margin: 0 0 0 0;
     padding: 0;
@@ -91,9 +98,11 @@ header div{
     top: 0;
     left: 0;
 
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 20;
 }
 .contact .wrap {
     background-color: var(--current-color);
@@ -230,11 +239,12 @@ header div{
 }
 .hover-images div {
     flex-shrink: 1;
-    /* min-width: 20%; */
+    /* flex: 0 1 auto; */
     height: 100%;
     max-width: fit-content;
 
-    transition: flex-shrink 1500ms ease-out;
+    transition: width 3000ms ease-out, flex-shrink 1500ms ease-out;
+
     /* transition: flex-grow 1500ms ease-out; */
 
     /* border: 2px dashed orange; */
@@ -243,7 +253,7 @@ header div{
 
 .hover-images img {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
     display: inline-block;
     filter: saturate(0.25) brightness(0.6);
