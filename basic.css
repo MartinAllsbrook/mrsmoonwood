@@ -117,14 +117,6 @@ header div{
     padding: 32px;
 }
 .contact .wrap h1{
-    /* position: absolute;
-    width: 107px;
-    height: 24px;
-    left: 348px;
-    top: 191px; */
-
-    
-
     font-family: mrs-eaves, serif;
     font-weight: 400;
     font-style: normal;
@@ -144,18 +136,16 @@ header div{
 .contact input {
     box-sizing: border-box;
     display: block;
-
     /* position: absolute; */
+
     width: 744px;
     height: 32px;
-
     margin: 0 0 24px 0;
     padding-left: 8px;
 
     background: var(--current-color);
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 2px;
-
     color: white;
 
     font-family: 'IBM Plex Sans', sans-serif;
@@ -171,16 +161,13 @@ header div{
     background: var(--current-color);
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 2px;
-
-    width: 744px;
-    height: 132px;
-
     color: white;
     opacity: 80%;
 
+    width: 744px;
+    height: 132px;
     margin: 48px 0 24px 0;
     padding: 8px;
-
     resize: none;
 
     font-family: 'IBM Plex Sans', sans-serif;
@@ -206,7 +193,6 @@ header div{
 .contact .name .first-name{
     margin-right: 24px;
 }
-
 .contact .wrap form button {
     width: 360px;
     height: 32px;
@@ -221,7 +207,6 @@ header div{
 }
 .contact .noshow{
     margin: 0 0 auto auto;
-
 }
 .contact .noshow img{
     width: 16px;
@@ -235,6 +220,7 @@ header div{
 
 .hover-images{
     display: flex;
+    flex-direction: row;
 
     height: calc(100vh - 67px);
     width: 100%;
@@ -243,6 +229,7 @@ header div{
     flex-shrink: 1;
     /* flex: 0 1 auto; */
     height: 100%;
+    width: none;
     max-width: fit-content;
 
     transition: width 3000ms ease-out, flex-shrink 1500ms ease-out;
@@ -252,19 +239,35 @@ header div{
     /* border: 2px dashed orange; */
     /* border-color: ; */
 }
-
 .hover-images img {
     height: 100%;
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
     display: inline-block;
     filter: saturate(0.25) brightness(0.6);
 }
-
 #test{
     /* flex-shrink: 0.5; */
 }
-
 #test2{
     /* flex-shrink: 0.1; */
+}
+
+
+@media screen and (max-width: 420px) {
+    .hover-images{
+        flex-direction: column;
+    }
+    .hover-images div{
+        /* height: none; */
+        width: 100%;
+        max-width: 100%;
+        /* max-height: fit-content; */
+    }
+    .hover-images img{
+        /* height: none; */
+        width: 100%;
+        max-width: 100%;
+        /* max-height: fit-content; */
+    }
 }
