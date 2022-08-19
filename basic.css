@@ -268,7 +268,7 @@ header div{
     display: none;
     flex-direction: column;
 
-    border: 5px dashed red;
+    /* border: 5px dashed red; */
 
     width: 100%;
     height: calc(100vh - 67px);
