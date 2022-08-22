@@ -1,11 +1,21 @@
-:root{
+:root {
     --animation-duration: 350ms;
     --current-color: rgba(97, 84, 109, 0.9);
 }
-
-body{
+* {
     margin: 0;
     padding: 0;
+
+    /* box-sizing: border-box; */
+    position: relative;
+}
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: classica-pro, serif;
+    font-weight: 300;
+    font-style: normal;
 
     color: #EBE5E2;
 
@@ -14,7 +24,28 @@ body{
 
     overflow: hidden;
 }
+h1 {
+    font-family: classica-pro, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 37px;
 
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+}
+/* h2 {
+    font-family: classica-pro, serif;
+    font-weight: 300;
+    font-style: normal;
+} */
 /* -=+=====================+=- */
 /* -=+=- Header Style -=+=- */
 /* -=+=====================+=- */
@@ -37,16 +68,7 @@ header {
     /* transition: background-color var(--animation-duration) linear; */
     /* color: white; */
 }
-header h1{
-    font-family: mrs-eaves, serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 32.5px;
-    line-height: 37px;
 
-    margin: 0;
-    padding: 0;
-}
 header a {
     display: flex;
     margin: 0 0 0 24px;
@@ -88,15 +110,16 @@ header div{
 
     padding: 0;
 }
+
 /* -=+=====================+=- */
 /* -=+=- Contact Style -=+=- */
 /* -=+=====================+=- */
 .contact {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 67px);
 
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
 
     display: none;
@@ -106,6 +129,83 @@ header div{
     z-index: 20;
 }
 .contact .wrap {
+    width: 861px;
+    height: 532px;
+    background-color: var(--current-color);
+
+    border-radius: 11px;
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    margin: 0;
+    padding: 32px 0px;
+}
+.contact .wrap .noshow{
+    position: absolute;
+    top: 40px;
+    right: 32px;
+}
+.contact .wrap .half {
+    width: 430PX;
+
+    padding: 8px 32px;
+}
+.contact .wrap .vl {
+    width: 1px;
+    background: white;
+    flex-shrink: 0;
+    /* border: 0.5px solid white; */
+}
+.contact .wrap .half img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    margin: 24px 0;
+}
+.contact .wrap .half .footer {
+    position: absolute;
+
+    bottom:  8px;
+}
+.contact .wrap .half input,
+.contact .wrap .half textarea,
+.contact .wrap .half button {
+    box-sizing: border-box;
+    /* display: block; */
+    width: 100%;
+    height: 32px;
+    margin: 16px 0 0 0;
+    padding: 8px;
+
+    /* background: var(--current-color); */
+    background: none;
+    color: white;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+.contact .wrap .half input {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    /* border-radius: 2px; */
+    
+}
+.contact .wrap .half textarea {
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    height: 175px;
+    margin: 32px 0;
+}
+.contact .wrap .half button {
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* .contact .contact-right {
     background-color: var(--current-color);
 
     width: 744px;
@@ -117,7 +217,7 @@ header div{
     margin: 0;
     padding: 32px;
 }
-.contact .wrap h1{
+.contact .contact-right h1{
     font-family: mrs-eaves, serif;
     font-weight: 400;
     font-style: normal;
@@ -131,13 +231,13 @@ header div{
     display: block;
     margin: 0;
     padding: 0;
-    /* margin: 32px; */
+    /* margin: 32px;
     width: 744px;
 }
 .contact input {
     box-sizing: border-box;
     display: block;
-    /* position: absolute; */
+    /* position: absolute;
 
     width: 744px;
     height: 32px;
@@ -167,7 +267,7 @@ header div{
 
     width: 744px;
     height: 132px;
-    margin: 48px 0 24px 0;
+    margin: 24px 0;
     padding: 8px;
     resize: none;
 
@@ -178,23 +278,14 @@ header div{
     line-height: 16px;
 }
 .contact textarea::placeholder{
-    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-family: Arial, Helvetica, sans-serif;
     opacity: 80%;
 }
 .contact input::placeholder{
     opacity: 80%;
-    /* top: 0%; */
+    /* top: 0%; 
 }
-.contact .name {
-    /* display: flex; */
-}
-.contact .name input {
-    width: 360px;
-}
-.contact .name .first-name{
-    margin-right: 24px;
-}
-.contact .wrap form button {
+.contact .contact-right form button {
     width: 360px;
     height: 32px;
     display: block;
@@ -203,7 +294,7 @@ header div{
     border: 1px solid rgba(255, 255, 255, 0.6);
     color: white;
 }
-.contact .wrap div{
+.contact .contact-right div{
     display: flex;
 }
 .contact .noshow{
@@ -213,7 +304,7 @@ header div{
     width: 16px;
     height: 16px;
     margin: 0;
-}
+} */
 
 /* -=+==================+=- */
 /* -=+=- Images Style -=+=- */

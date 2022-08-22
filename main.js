@@ -83,7 +83,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     {
         let currentImg = 0;
 
-
         let selecting = false;
         let firstSelection = true;
         const divs = document.querySelectorAll('.images-mobile div');
@@ -91,16 +90,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         for(let i = 0; i < divs.length; i++) {
             images.push(new Image(divs[i]));
         }
-
-
-
-
-
-
-
-
-
-
 
         document.addEventListener('touchstart', handleTouchStart, false);        
         document.addEventListener('touchmove', handleTouchMove, false);
@@ -151,22 +140,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             /* reset value */
             yDown = null;                                             
         };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         select(currentImg);
         document.getElementsByClassName('images-mobile')[0].addEventListener('click', (event) => {
