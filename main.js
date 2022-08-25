@@ -1,13 +1,15 @@
-class Image {
-    constructor(div){
-        this.div = div;
-        this.img = div.getElementsByTagName('img')[0];
-        this.selected = false;
-    }
-}
+
 
 // Once All content is loaded
 window.addEventListener('DOMContentLoaded', (event) => {
+    class Image {
+        constructor(div){
+            this.div = div;
+            this.img = div.getElementsByTagName('img')[0];
+            this.selected = false;
+        }
+    }
+    
     // Desktop interaction
     {
         let selecting = false;

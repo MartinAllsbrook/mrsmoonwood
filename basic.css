@@ -46,35 +46,39 @@ p {
     font-weight: 300;
     font-style: normal;
 } */
+
+
 /* -=+=====================+=- */
 /* -=+=- Header Style -=+=- */
 /* -=+=====================+=- */
 header {
-    margin: 0;
-    padding: 0;
-
     width: 100%;
     height: 64px;
+    padding: 0 80px;
 
     display: flex;
     position: relative;
 
-    /* background-color: #735B6B; */
     background-color: #61546D;
     border-bottom: 3px solid #FF7511;
     color: #EBE5E2;
 
     z-index: 20;
-    /* transition: background-color var(--animation-duration) linear; */
-    /* color: white; */
 }
 
 header a {
     display: flex;
-    margin: 0 0 0 24px;
-    padding: 0;
     color: #EBE5E2;
     text-decoration: none;
+}
+header a:hover {
+    cursor: pointer;
+}
+header .spacer {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    background-color: aqua;
 }
 .contact-icon{
     width: 34px;
@@ -92,23 +96,22 @@ header img{
     padding: 0;
 }
 header div{
-    flex-grow: 1;
-    margin: 0 80px;
-    padding: 0;
+    /* margin: 0 80px; */
 
     display: flex;
     align-items: center;
 }
 .header-right{
     justify-content: right;
+    /* flex-grow: 1; */
+    margin-left: auto;
 
 }
 .noshow {
     border: none;
     background: none;
     color: white;
-
-    padding: 0;
+    box-sizing: border-box;
 }
 
 /* -=+=====================+=- */
@@ -205,112 +208,9 @@ header div{
     margin: 0;
 }
 
-/* .contact .contact-right {
-    background-color: var(--current-color);
-
-    width: 744px;
-    height: 436px;
-
-    border-radius: 11px;
-    backdrop-filter: blur(4px);
-
-    margin: 0;
-    padding: 32px;
-}
-.contact .contact-right h1{
-    font-family: mrs-eaves, serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 24px;
-
-    margin: 0 0 24px 0;
-    padding: 0;
-}
-.contact form {
-    display: block;
-    margin: 0;
-    padding: 0;
-    /* margin: 32px;
-    width: 744px;
-}
-.contact input {
-    box-sizing: border-box;
-    display: block;
-    /* position: absolute;
-
-    width: 744px;
-    height: 32px;
-    margin: 0 0 24px 0;
-    padding-left: 8px;
-
-    background: var(--current-color);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 2px;
-    color: white;
-
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-}
-.contact textarea{
-    box-sizing: border-box;
-    display: block;
-
-    background: var(--current-color);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 2px;
-    color: white;
-    opacity: 80%;
-
-    width: 744px;
-    height: 132px;
-    margin: 24px 0;
-    padding: 8px;
-    resize: none;
-
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-}
-.contact textarea::placeholder{
-    /* font-family: Arial, Helvetica, sans-serif;
-    opacity: 80%;
-}
-.contact input::placeholder{
-    opacity: 80%;
-    /* top: 0%; 
-}
-.contact .contact-right form button {
-    width: 360px;
-    height: 32px;
-    display: block;
-
-    background: var(--current-color);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    color: white;
-}
-.contact .contact-right div{
-    display: flex;
-}
-.contact .noshow{
-    margin: 0 0 auto auto;
-}
-.contact .noshow img{
-    width: 16px;
-    height: 16px;
-    margin: 0;
-} */
-
 /* -=+==================+=- */
 /* -=+=- Images Style -=+=- */
 /* -=+==================+=- */
-
-
 .hover-images{
     display: flex;
     flex-direction: row;
@@ -331,11 +231,6 @@ header div{
     transition: 
         750ms flex-shrink ease-out,
         500ms filter linear;
-
-    /* transition: flex-grow 1500ms ease-out; */
-
-    /* border: 2px dashed orange; */
-    /* border-color: ; */
 }
 .hover-images img {
     width: fit-content;
@@ -348,13 +243,10 @@ header div{
     filter: saturate(0.25) brightness(0.6);
     transition: 500ms filter linear;
 }
-#test{
-    /* flex-shrink: 0.5; */
-}
-#test2{
-    /* flex-shrink: 0.1; */
-}
 
+/* -=+===========================+=- */
+/* -=+=- Images Style (MOBILE) -=+=- */
+/* -=+===========================+=- */
 .images-mobile{
     display: none;
     flex-direction: column;
@@ -394,5 +286,21 @@ header div{
     }
     .images-mobile{
         display: flex;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+    header {
+        padding: 0 24px;
+    }
+
+    .contact-icon {
+        width: 22.5px;
+        height: 12.5px;
+    }   
+    .instagram-icon {
+        width: 16.25px;
+        height: 16.25px;
     }
 }
