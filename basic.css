@@ -52,7 +52,7 @@ p {
 /* -=+=- Header Style -=+=- */
 /* -=+=====================+=- */
 header {
-    width: 100%;
+    width: calc(100%-160px);
     height: 64px;
     padding: 0 80px;
 
@@ -78,7 +78,7 @@ header .spacer {
     flex-shrink: 0;
     width: 26px;
     height: 26px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 .contact-icon{
     width: 34px;
@@ -207,7 +207,17 @@ header div{
     border: 1px solid rgba(255, 255, 255, 0.9);
     margin: 0;
 }
+.contact .mobile-wrap {
+    display: none;
 
+    background-color: var(--current-color);
+
+    border-radius: 11px;
+    backdrop-filter: blur(4px);
+    padding: 16px;
+    margin: 16px;
+    
+}
 /* -=+==================+=- */
 /* -=+=- Images Style -=+=- */
 /* -=+==================+=- */
@@ -280,7 +290,7 @@ header div{
     transition: 500ms filter linear;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 900px) {
     .hover-images{
         display: none;
     }
@@ -296,11 +306,17 @@ header div{
     }
 
     .contact-icon {
-        width: 22.5px;
-        height: 12.5px;
+        width: 23.54px;
+        height: 13.85px;
     }   
     .instagram-icon {
-        width: 16.25px;
-        height: 16.25px;
+        width: 18px;
+        height: 18px;
+    }
+    .contact .wrap{
+        display: none;
+    }
+    .contact .mobile-wrap {
+        display: block;
     }
 }
