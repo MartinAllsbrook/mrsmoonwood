@@ -42,7 +42,6 @@ p {
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
-    line-height: 21px;
 }
 /* h2 {
     font-family: classica-pro, serif;
@@ -181,9 +180,9 @@ header div{
 
     bottom:  8px;
 }
-.contact .wrap .half input,
-.contact .wrap .half textarea,
-.contact .wrap .half button {
+.contact form input,
+.contact form textarea,
+.contact form button {
     box-sizing: border-box;
     /* display: block; */
     width: 100%;
@@ -201,18 +200,18 @@ header div{
     font-size: 0.75rem;
     line-height: 1rem;
 }
-.contact .wrap .half input {
+.contact form input {
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.9);
     /* border-radius: 2px; */
     
 }
-.contact .wrap .half textarea {
+.contact form textarea {
     border: 1px solid rgba(255, 255, 255, 0.9);
     height: 175px;
     margin: 2rem 0;
 }
-.contact .wrap .half button {
+.contact form button {
     border: 1px solid rgba(255, 255, 255, 0.9);
     margin: 0;
 }
@@ -228,24 +227,34 @@ header div{
     
     max-width: 350px;
 }
-.headshot {
+.contact .mobile-wrap .headshot {
     width: 100%;
     max-width: 350px;
     height: auto;
     max-height: 200px;
     object-fit: cover;
 
-    margin: 1rem 0;
+    margin: 1rem 0 0.5rem 0;
 }
-
-.getintouch {
+.contact .mobile-wrap .form {
+    display: none;
+}
+.contact .mobile-wrap .bio {
+    display: block;
+}
+.contact .mobile-wrap .getintouch {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: right;
+    /* margin: 0.75rem 0 0 0; */
 }
-.getintouch img{
+.contact .mobile-wrap .getintouch img{
     max-width: 2rem;
+    margin-left: 0.75rem;
+}
+.contact .mobile-wrap .getintouch h1 {
+    margin: 0;
 }
 /* -=+==================+=- */
 /* -=+=- Images Style -=+=- */
@@ -354,7 +363,17 @@ header div{
 
     .contact .close {
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 0rem;
+        right: 0rem;
+    }
+
+    .contact form input,
+    .contact form textarea,
+    .contact form button {
+        margin: 0.5rem 0 0 0;
+    }
+
+    .contact form textarea {
+        height: 72px;
     }
 }
