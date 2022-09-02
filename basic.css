@@ -31,8 +31,11 @@ h1 {
     font-size: 32px;
     line-height: 37px;
 
-    margin: 0 0 8px 0;
+    margin: 0 0 0.5rem 0;
     padding: 0;
+}
+header h1 {
+    margin: 0;
 }
 p {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -112,7 +115,13 @@ header div{
     background: none;
     color: white;
     box-sizing: border-box;
+
+    font-size: 1.5em;
+    font-family: classica-pro, serif;
+    font-weight: 300;
+    font-style: normal;
 }
+
 
 /* -=+=====================+=- */
 /* -=+=- Contact Style -=+=- */
@@ -141,17 +150,17 @@ header div{
 
     display: flex;
     margin: 0;
-    padding: 32px 0px;
+    padding: 2rem 0px;
 }
-.contact .wrap .noshow{
+.contact .close{
     position: absolute;
-    top: 40px;
-    right: 32px;
+    top: 2.5rem;
+    right: 2rem;
 }
 .contact .wrap .half {
     width: 430PX;
 
-    padding: 8px 32px;
+    padding: 0.5rem 2rem;
 }
 .contact .wrap .vl {
     width: 1px;
@@ -165,7 +174,7 @@ header div{
 
     object-fit: cover;
 
-    margin: 24px 0;
+    margin: 1.5rem 0;
 }
 .contact .wrap .half .footer {
     position: absolute;
@@ -178,9 +187,9 @@ header div{
     box-sizing: border-box;
     /* display: block; */
     width: 100%;
-    height: 32px;
-    margin: 16px 0 0 0;
-    padding: 8px;
+    height: 2rem;
+    margin: 1rem 0 0 0;
+    padding: 0.5rem;
 
     /* background: var(--current-color); */
     background: none;
@@ -189,8 +198,8 @@ header div{
     font-family: 'IBM Plex Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 0.75rem;
+    line-height: 1rem;
 }
 .contact .wrap .half input {
     border: none;
@@ -201,7 +210,7 @@ header div{
 .contact .wrap .half textarea {
     border: 1px solid rgba(255, 255, 255, 0.9);
     height: 175px;
-    margin: 32px 0;
+    margin: 2rem 0;
 }
 .contact .wrap .half button {
     border: 1px solid rgba(255, 255, 255, 0.9);
@@ -214,9 +223,29 @@ header div{
 
     border-radius: 11px;
     backdrop-filter: blur(4px);
-    padding: 16px;
-    margin: 16px;
+    padding: 1rem;
+    margin: 1rem;
     
+    max-width: 350px;
+}
+.headshot {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+
+    margin: 1rem 0;
+}
+
+.getintouch {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: right;
+}
+.getintouch img{
+    max-width: 2rem;
 }
 /* -=+==================+=- */
 /* -=+=- Images Style -=+=- */
@@ -299,10 +328,13 @@ header div{
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 1.6rem;
+    }
+    p {
+        font-size: 0.9rem;
     }
     header {
-        padding: 0 24px;
+        padding: 0 1.5rem;
     }
 
     .contact-icon {
@@ -318,5 +350,11 @@ header div{
     }
     .contact .mobile-wrap {
         display: block;
+    }
+
+    .contact .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
 }

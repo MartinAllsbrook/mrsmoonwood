@@ -178,15 +178,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     // Makes contact button clickable
     {
+        let close = document.getElementsByClassName('close');
+        for(let i = 0; i < close.length; i++){
+            close[i].addEventListener('click', () => {
+                document.getElementsByClassName('contact')[0].style.display = 'none';
+            }, false)
+        }
+
         document.getElementById('contact').addEventListener('click', () => {
             document.getElementsByClassName('contact')[0].style.display = 'flex';
             // document.getElementsByClassName('contact')[0].style.zIndex = '20';
         }, false)
 
-        document.getElementById('close').addEventListener('click', () => {
-            document.getElementsByClassName('contact')[0].style.display = 'none';
-            // document.getElementsByClassName('contact')[0].style.zIndex = '20';
-        }, false)
     }
 }, false);
 
