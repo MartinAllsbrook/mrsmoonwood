@@ -191,5 +191,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }, false)
 
     }
+
+    // Swap between mobile contact screen
+    {
+        let onBio = true;
+        let getintouchButtons = document.getElementsByClassName('getintouch');
+        for(let i = 0; i < getintouchButtons.length; i++){
+            getintouchButtons[i].addEventListener('click', () => {
+                if(onBio == true){
+                    document.getElementsByClassName('form')[0].style.display = 'block';
+                    document.getElementsByClassName('bio')[0].style.display = 'none';
+                    onBio = false;
+                }else{
+                    document.getElementsByClassName('bio')[0].style.display = 'block';
+                    document.getElementsByClassName('form')[0].style.display = 'none';
+                    onBio = true;
+                }
+            }, false)
+        }
+    }
 }, false);
 
