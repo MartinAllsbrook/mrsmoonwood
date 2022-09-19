@@ -226,6 +226,7 @@ header div{
     margin: 1rem;
     
     max-width: 350px;
+    /* height: ; */
 }
 .contact .mobile-wrap .headshot {
     width: 100%;
